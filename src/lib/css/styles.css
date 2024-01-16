@@ -344,3 +344,53 @@
   width: 90%;
   }
   }
+
+  /* PARTIE ADMIN */
+
+  #gestion {
+    width: 80%; 
+    margin: 0 auto; 
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    }
+  
+    .gestion {
+      background-color: #677A91;
+      color: #FFCD29;
+      border: none;
+      padding: 10px 10px;
+      margin-top: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px; 
+      
+    }
+  
+    .formulaire {
+     
+      margin-top: 20px;
+      
+    }
+  
+    .formulaire ul {
+      max-width:380px;
+      list-style-type:none;
+      margin:auto;
+    }
+  
+    .formulaire li {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  
+    aside p {
+      margin-top: 10px;
+      color: #E74C3C
+    }
+  
+    label {
+      display: block;
+      width: 150px;
+      float: left;
+    }

@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Gestion du menu burger
-    var burgerMenu = document.getElementById('burgerMenu');
-    var nav = document.getElementById('topNav');
+    const burgerMenu = document.getElementById('burgerMenu');
+    const nav = document.getElementById('topNav');
 
     burgerMenu.addEventListener('click', function() {
         nav.classList.toggle('nav-active');
     });
 
-    var navLinks = nav.getElementsByTagName('a');
-    for (var i = 0; i < navLinks.length; i++) {
+    const navLinks = nav.getElementsByTagName('a');
+    for (const i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener('click', function() {
             if (window.innerWidth <= 768) {
                 nav.classList.remove('nav-active');

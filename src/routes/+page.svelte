@@ -1,16 +1,35 @@
+
+<script>
+  
+    let lignes = new Array(3).fill({id: "—", score: "—", rank: "—"});
+  
+
+  </script>
+
 <main>
     <section id="scoreboard">
         <h2>Top 3 Scores</h2>
         <table>
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Score</th>
-              <th>Rang</th>
+              <td>ID</td>
+              <td>Score</td>
+              <td>Rang</td>
             </tr>
           </thead>
           <tbody>
             <!-- Les lignes du tableau seront ajoutées ici par JavaScript -->
+          </tbody>
+        </table>
+        <table id="scoreboard">
+          <tbody>
+            {#each lignes as ligne}
+              <tr>
+                <td>{ligne.id}</td>
+                <td>{ligne.score}</td>
+                <td>{ligne.rank}</td>
+              </tr>
+            {/each}
           </tbody>
         </table>
       </section>
