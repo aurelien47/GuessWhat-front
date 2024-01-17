@@ -394,3 +394,37 @@
       width: 150px;
       float: left;
     }
+
+    /* PAGE PROFIL UITLISATEUR */
+
+    h1 {
+      margin-bottom: 10px;  
+    }
+
+    .profil {
+      width: 500px;
+      color: #FFCD29;
+    }
+    
+    .image_utilisateur {
+      width: 300px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 480px;
+      margin: auto;
+    }
+
+    table tr {
+      background-color: #677A91;
+    }
+
+    table td {
+      width: 240px;
+    }
+
+    #changemdp {
+    background-color: #677A91;
+    color: #FFCD29;
+    }
