@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #2C3E50;
+    color: #FFCD29;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background-color: #677A91;
+    color: #FFCD29;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  #logo {
+    position: absolute;
+    left: 20px;
+    height: 80px; 
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  nav a {
+    color: #FFCD29;
+    text-decoration: none;
+    padding: 0 10px;
+    line-height: 70px;
+  }
+  
+  #burgerMenu {
+    display: none; 
+    cursor: pointer;
+    font-size: 24px; 
+    background: none;
+    border: none;
+    color: #FFCD29;
+    position: absolute;
+    right: 20px; 
+    top: 20px; 
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #welcome-section h1 {
+    color: #FFCD29;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #welcome-section p {
+    color: #FFFFFF; 
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  #playButton {
+    background-color: #677A91;
+    color: #FFCD29;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 60px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  footer {
+    background-color: #677A91;
+    color: #FFCD29;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; 
+  }
+  
+  footer
+  a {
+  color: #FFCD29;
+  text-decoration: none;
+  margin: 0 20px; 
+  padding: 0.5em 1em; 
+  white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+  #burgerMenu {
+  display: block; 
+  }
+  
+  nav {
+  position: fixed; 
+  top: 70px; 
+  right: 0; 
+  background-color: rgba(103, 122, 145, 0.193); 
+  display: none; 
+  flex-direction: row;
+  align-items: center; 
+  z-index: 1000; 
+  }
+  
+  nav a {
+  padding: 10px 20px; 
+  font-size: 16px; 
+  color: #FFCD29; 
+  text-decoration: none;
+  display: inline-block; 
+  text-align: center;
+}
+  
+  .nav-active {
+  display: flex;
+  justify-content: flex-end; 
+  }
+  
+  footer {
+  flex-wrap: wrap; 
+  justify-content: center; 
+  }
+  
+  footer a {
+  margin: 10px; 
+  padding: 0.5em;
+  }
+  }
+
+
+#scoreboard {
+  width: 80%; 
+  margin: 0 auto; 
+  max-width: 1200px; 
+}
+
+#scoreboard h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#scoreboard table {
+  width: 100%; 
+  border-collapse: collapse;
+  table-layout: fixed; 
+}
+
+#scoreboard th, #scoreboard td {
+  color: #2C3E50; 
+  border: 1px solid #2C3E50; 
+  text-align: center;
+  padding: 10px;
+  background-color: #FFFFFF;
+}
+
+#scoreboard th, #scoreboard td {
+  min-height: 50px; 
+}
+
+#bienvenue, .bienvenue {
+    color: #FFFFFF; 
+}
+  
+  body p {
+    color: #FFFFFF; 
+  }
+
+  .login-container {
+    background-color: #677A91;
+    padding: 40px;
+    margin: auto;
+    max-width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-form {
+    width: 100%;
+  }
+  
+  .login-form h2 {
+    color: #FFCD29; /* Couleur du titre pour la connexion */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #2C3E50;
+    color: #FFCD29;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Styles pour le lien "Mot de passe oublié" */
+  .password-forgot {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #FFCD29;
+    text-decoration: none;
+  }
+  
+  /* Ajouter des styles supplémentaires pour les interactions */
+  button:hover,
+  a:hover {
+    opacity: 0.8;
+  }
+  
+
+/* CSS de base pour la page d'inscription */
+
+  
+  header {
+    background-color: #677A91;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  }
+  
+  header img {
+    height: 50px; /* Ajustez selon la taille de votre logo */
+  }
+  
+  nav a {
+    color: #FFCD29;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+  }
+  
+  nav a.active {
+    border-bottom: 2px solid #FFCD29;
+  }
+  
+  .form-container {
+    background-color: #677A91;
+    padding: 40px; /* Augmentez le padding pour plus d'espace */
+    margin: auto;
+    max-width: 550px; /* Ajustez la largeur maximale si nécessaire */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Utilisez flex pour centrer verticalement */
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+  
+  .inscription-form {
+    width: 100%; /* Utilisez 100% de la .form-container */
+  }
+  
+  .inscription-form h1 {
+    color: #FFCD29; /* Couleur du titre pour l'inscription */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .inscription-form input[type="text"],
+  .inscription-form input[type="email"],
+  .inscription-form input[type="password"] {
+    width: 100%; /* Les inputs prennent toute la largeur */
+    margin-bottom: 10px; /* Ajoute de l'espace entre les inputs */
+    padding: 12px 20px; /* Ajustez le padding pour plus de confort */
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Gris clair pour la bordure */
+    font-size: 16px;
+  }
+  
+  .inscription-form button {
+    width: 100%; /* Le bouton prend toute la largeur */
+    padding: 10px 20px; /* Ajustez le padding pour plus de confort */
+    background-color: #2C3E50;
+    color: #FFCD29;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du bouton */
+  }
+  
+  
+  footer {
+  background-color: #677A91;
+  color: #FFCD29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  }
+  
+  footer a {
+  color: #FFCD29;
+  text-decoration: none;
+  padding: 5px 10px;
+  }
+  
+  @media (max-width: 768px) {
+  .form-container {
+  width: 90%;
+  }
+  }
+
+  /* PARTIE ADMIN */
+
+  #gestion {
+    width: 80%; 
+    margin: 0 auto; 
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    }
+  
+    .gestion {
+      background-color: #677A91;
+      color: #FFCD29;
+      border: none;
+      padding: 10px 10px;
+      margin-top: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px; 
+      
+    }
+  
+    .formulaire {
+     
+      margin-top: 20px;
+      
+    }
+  
+    .formulaire ul {
+      max-width:380px;
+      list-style-type:none;
+      margin:auto;
+    }
+  
+    .formulaire li {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  
+    aside p {
+      margin-top: 10px;
+      color: #E74C3C
+    }
+  
+    label {
+      display: block;
+      width: 150px;
+      float: left;
+    }

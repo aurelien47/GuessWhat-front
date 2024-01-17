@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Guess What</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <img src="assets/images/Logo Guess What.png" alt="Logo" id="logo">
+    <button id="burgerMenu">☰</button>
+    <nav id="topNav">
+      <a href="index.html">Accueil</a>
+      <a href="login.html">Connexion</a>
+      <a href="register.html" class="active">Inscription</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <form action="inscription" method="post" class="inscription-form">
+        <h1>Inscription</h1>
+        <div class="form-group">
+          <label for="pseudo">Pseudo</label>
+          <input type="text" id="pseudo" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirmation du mot de passe</label>
+          <input type="password" id="confirm-password" name="confirm_password" required>
+        </div>
+        <button type="submit">Créer un compte</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <a href="contact.html">Contact</a>
+    <a href="legal.html">Légale</a>
+    <a href="cgu.html">CGU</a>
+    <script src="js/script.js"></script>
+  </footer>
+</body>
+</html>

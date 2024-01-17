@@ -1,39 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Guess What</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
 
-<script>
-  
-    let lignes = new Array(3).fill({id: "—", score: "—", rank: "—"});
-  
+</head>
+<body>
+  <header>
+    <img src="assets/images/Logo Guess What.png" alt="Logo" id="logo">
+    <button id="burgerMenu">☰</button>
+    <nav id="topNav">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="login.html">Connexion</a>
+      <a href="register.html">Inscription</a>
+    </nav>
+  </header>
 
-  </script>
-
-<main>
+  <main>
     <section id="scoreboard">
         <h2>Top 3 Scores</h2>
         <table>
           <thead>
             <tr>
-              <td>ID</td>
-              <td>Score</td>
-              <td>Rang</td>
+              <th>ID</th>
+              <th>Score</th>
+              <th>Rang</th>
             </tr>
           </thead>
           <tbody>
             <!-- Les lignes du tableau seront ajoutées ici par JavaScript -->
           </tbody>
         </table>
-        <table id="scoreboard">
-          <tbody>
-            {#each lignes as ligne}
-              <tr>
-                <td>{ligne.id}</td>
-                <td>{ligne.score}</td>
-                <td>{ligne.rank}</td>
-              </tr>
-            {/each}
-          </tbody>
-        </table>
       </section>
-  
+
     
       <p>🚀 Bienvenue sur Guess What – Le Fruit de Notre Passion pour le Développement!
         🚀Chers utilisateurs,Nous sommes quatre développeurs passionnés, unis par notre amour pour la technologie et les défis intellectuels. 
@@ -44,8 +46,17 @@
         Ce jeu est notre rêve devenu réalité, une invitation à explorer le monde fascinant du développement à travers le prisme ludique des devinettes.
          Prêts à coder votre chemin à travers les énigmes? Que l'aventure commence!"</p>
         
-  
+
       <button id="playButton">Jouer</button>
     
   </main>
-  
+
+  <footer>
+    <a href="contact.html">Contact</a>
+    <a href="legal.html">Légale</a>
+    <a href="cgu.html">CGU</a>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
