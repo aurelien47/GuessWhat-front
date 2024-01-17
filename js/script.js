@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Gestion du menu burger
+   
     const burgerMenu = document.getElementById('burgerMenu');
     const nav = document.getElementById('topNav');
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Pré-remplissage du tableau des scores
+  
     const tbody = document.querySelector('#scoreboard tbody');
     for (let i = 0; i < 3; i++) {
         const tr = document.createElement('tr');
@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         tbody.appendChild(tr);
     }
 
-    // Ajout de la logique pour le formulaire de connexion
+   
     const loginForm = document.querySelector('.login-form');
 
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Empêche la soumission normale du formulaire
+            e.preventDefault(); 
 
             const email = document.querySelector('#email').value;
             const password = document.querySelector('#password').value;
@@ -38,8 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Veuillez remplir tous les champs.');
             } else {
                 console.log('Formulaire prêt à être envoyé');
-                // Ici, envoyez les données à votre serveur si nécessaire
-                // loginForm.submit(); // Décommentez pour soumettre le formulaire
+               
             }
         });
     }

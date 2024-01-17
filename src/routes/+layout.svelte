@@ -7,14 +7,21 @@ function toggleMenu() {
   nav.classList.toggle('nav-active');
 }
 
+function toggleNav() {
+  const nav = document.getElementById('topNav');
+  if (window.innerWidth <= 768) {
+                nav.classList.remove('nav-active');
+            }
+}
+
 </script>
   <header>
     <img src={logo} alt="Logo" id="logo">
     <button id="burgerMenu" on:click={toggleMenu}>☰</button>
     <nav id="topNav">
-      <a href="/" class="active">Accueil</a>
-      <a href="/login">Connexion</a>
-      <a href="/register">Inscription</a>
+      <a on:click={toggleNav} href="/" class="active">Accueil</a>
+      <a on:click={toggleNav} href="/login">Connexion</a>
+      <a on:click={toggleNav} href="/register">Inscription</a>
     </nav>
   </header>
   <slot> </slot>         
