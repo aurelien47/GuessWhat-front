@@ -1,8 +1,11 @@
+    <script>
+    import woman from '$lib/assets/images/woman-1460150_1280.jpg';
+    </script>
 <main>
     
     <section class="profil">
         <h1>Votre profil</h1>
-        <img class="image_utilisateur" src="$lib/assets/images/woman-1460150_1280.jpg" alt="photo_profil"/>
+        <img class="image_utilisateur" src={woman} alt="photo_profil"/>
         <table>
             <tbody>
                 <tr>
