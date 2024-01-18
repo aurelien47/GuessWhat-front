@@ -3,22 +3,21 @@
     <section class="profil">
         <h1>Votre profil</h1>
         
-        <table class="view_profil">
-            <tbody>
-                <tr>
-                    <td>Pseudo :</td>
-                    <td>Toto</td>
-                </tr>
-                <tr>
-                    <td>Date enregistrement :</td>
-                    <td>01/01/2024</td>
-                </tr>
-                <tr>
-                    <td>Adresse mail :</td>
-                    <td>moadressemail@gmail.com</td>
-                </tr>
-            </tbody>
-        </table>    
+        
+            
+                <ul class="view_profil">
+                    <li class="entete">Pseudo :</li>
+                    <li class="entete">Date enregistrement :</li>
+                    <li class="entete">Adresse mail :</li>
+                </ul>
+                <ul class="view_profil">
+                    
+                    <li>Toto</li>
+                    <li>01/01/2024</li>
+                    <li>moadressemail@gmail.com</li>
+                </ul>             
+            
+           
 
         <button id="changemdp">Changer de mot de passe</button>
     </section>    

@@ -4,7 +4,7 @@ export function load({ cookies }) {
 
 const token = cookies.get("token");
 if (!token) {
-    redirect(303, '/');
+    redirect(307, '/login');
 }
 
     console.log(cookies.get("token"));
