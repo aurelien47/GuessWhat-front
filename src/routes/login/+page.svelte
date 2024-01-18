@@ -1,6 +1,6 @@
 <main>
     <div class="login-container">
-      <form class="login-form">
+      <form method="post" class="login-form">
         <h2>Connexion</h2>
         <div class="form-control">
           <label for="email">Email</label>
