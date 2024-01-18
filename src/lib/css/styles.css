@@ -394,6 +394,7 @@
       width: 150px;
       float: left;
     }
+    /* FIN PARTIE ADMIN */
 
     /* PAGE PROFIL UITLISATEUR */
 
@@ -411,7 +412,7 @@
       margin-bottom: 10px;
     }
 
-    table {
+    .view_profil {
       width: 480px;
       margin: auto;
     }
@@ -423,8 +424,23 @@
     table td {
       width: 240px;
     }
+    /* FIN PAGE PROFIL UITLISATEUR */
 
     #changemdp {
     background-color: #677A91;
     color: #FFCD29;
     }
+
+    /* PAGE CLASSEMENT */
+
+    .view_ranking {
+      width: 480px;
+      margin: 10px 10px;
+    }
+
+    .ranking {
+      width: 450px;
+      margin: 10px 10px;
+    }
+
+    /* FIN PAGE CLASSEMENT */
