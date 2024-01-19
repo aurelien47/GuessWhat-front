@@ -151,34 +151,7 @@
   }
 
 
-#scoreboard {
-  width: 80%; 
-  margin: 0 auto; 
-  max-width: 1200px; 
-}
 
-#scoreboard h2 {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-#scoreboard table {
-  width: 100%; 
-  border-collapse: collapse;
-  table-layout: fixed; 
-}
-
-#scoreboard th, #scoreboard td {
-  color: #2C3E50; 
-  border: 1px solid #2C3E50; 
-  text-align: center;
-  padding: 10px;
-  background-color: #FFFFFF;
-}
-
-#scoreboard th, #scoreboard td {
-  min-height: 50px; 
-}
 
 #bienvenue, .bienvenue {
     color: #FFFFFF; 
@@ -444,3 +417,69 @@
     }
 
     /* FIN PAGE CLASSEMENT */
+
+/* Styles spécifiques pour la page de quiz */
+.quiz-container {
+  max-width: 1200px;
+  margin: auto; 
+  background-color: #677A91; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-header {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.theme-chooser,
+.user-profile,
+.question-box,
+.score-box,
+.hint-box {
+  /* Styles communs pour les div */
+  background: #fff; /* Fond blanc pour les div */
+  padding: 10px; /* Espace intérieur pour les div */
+  border-radius: 5px; /* Coins arrondis pour les div */
+  margin-bottom: 10px; /* Espace sous chaque div */
+}
+
+.theme-chooser select,
+.question-box textarea,
+.score-box textarea {
+  width: 100%; /* Utilisez toute la largeur du parent */
+  padding: 10px; /* Espace intérieur pour les éléments de formulaire */
+  border-radius: 5px; /* Coins arrondis pour les éléments de formulaire */
+  border: 1px solid #ccc; /* Bordure pour les éléments de formulaire */
+}
+
+.hint-box button,
+.answers-box input,
+.validate-button {
+  width: 100%; /* Utilisez toute la largeur du parent */
+  padding: 15px 0; /* Espace intérieur pour les boutons et inputs */
+  border: none; /* Aucune bordure pour les boutons et inputs */
+  background: #FFCD29; /* Fond jaune pour les boutons et inputs */
+  color: #2C3E50; /* Couleur de texte pour les boutons et inputs */
+  cursor: pointer; /* Curseur pointeur pour les boutons et inputs */
+  margin-bottom: 10px; /* Espace sous les boutons et inputs */
+  border-radius: 5px; /* Coins arrondis pour les boutons et inputs */
+}
+
+.validate-button {
+  background: #2C3E50; /* Fond différent pour le bouton valider */
+  color: #FFCD29; /* Couleur de texte différente pour le bouton valider */
+}
+
+@media (max-width: 768px) {
+  .quiz-container {
+    width: 90%; /* Largeur réduite pour la vue mobile */
+  }
+  
+  .quiz-header {
+    flex-direction: column; /* Empilement vertical pour la vue mobile */
+  }
+}
