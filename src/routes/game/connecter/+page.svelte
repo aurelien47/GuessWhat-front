@@ -15,12 +15,7 @@
   function handleSubmit() {
     // Logique pour valider et soumettre les réponses
   }
-
-
-
-
 </script>
-
 
 <main>
   <div class="top-section">

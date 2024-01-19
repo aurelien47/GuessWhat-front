@@ -2,6 +2,14 @@
 <script>
   
     let lignes = new Array(3).fill({id: "—", score: "—", rank: "—"});
+
+   import { goto } from '$app/navigation';
+
+  function playGame() {
+    goto('/game/visiteur'); // Assurez-vous que ce chemin correspond à l'URL de votre page de jeu
+  }
+
+
   
 
   </script>
@@ -45,7 +53,8 @@
          Prêts à coder votre chemin à travers les énigmes? Que l'aventure commence!"</p>
         
   
-      <button id="playButton">Jouer</button>
+      <button id="playButton" on:click={playGame}>Jouer</button>
+      
     
   </main>
   
