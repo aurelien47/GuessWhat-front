@@ -53,6 +53,10 @@
             </ul>
         </form>
         
+        <aside>
+            <button id="wiki">Lien wiki</button>
+        </aside>
+
         <button id="playButton">Valider</button>
     </section>
   </main>

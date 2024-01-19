@@ -376,7 +376,7 @@
     }
 
     .profil {
-      width: 500px;
+      width: 680px;
       color: #FFCD29;
     }
     
@@ -386,34 +386,69 @@
     }
 
     .view_profil {
-      width: 480px;
+      width: 600px;
       margin: auto;
     }
 
-    table tr {
-      background-color: #677A91;
+    .entete_profil {
+      width: 200px;
+      color: #FFCD29;
     }
 
-    table td {
-      width: 240px;
+    li {
+      text-align: center;
+      display: inline-flex;
     }
+    
     /* FIN PAGE PROFIL UITLISATEUR */
 
     #changemdp {
-    background-color: #677A91;
-    color: #FFCD29;
+      background-color: #677A91;
+      color: #FFCD29;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 60px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 20px;
     }
 
     /* PAGE CLASSEMENT */
 
-    .view_ranking {
-      width: 480px;
-      margin: 10px 10px;
+    .view_profil {
+      width: 550px;
+      margin: auto;
     }
 
     .ranking {
-      width: 450px;
+      width: 600px;
       margin: 10px 10px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .entete_profil {
+      display: table-cell; /* affichage en ligne */
+      color: #FFCD29;
+      margin: 10px 10px;
+    }
+
+    ul {
+      background-color: #677A91;
+    }
+
+    li {
+      flex: 1;
+      
+      display: inline-flex; /* affichage en ligne */
+      color: #FFFFFF;
+      margin: 10px 10px;
+      justify-content: center;
+    }
+
+    .larg {
+      flex-grow: 2;
     }
 
     /* FIN PAGE CLASSEMENT */
