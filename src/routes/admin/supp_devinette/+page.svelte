@@ -5,7 +5,7 @@
 
     async function getquestionfromtheme ( id ) { 
         console.log(id);
-    const questions = await fetch (`https://guesswhat-api.onrender.com/themes/${id}`, {
+    const questions = await fetch (`https://guesswhat-api.onrender.com/theme/${id}`, {
     method: "GET",
     
     headers: {
@@ -32,6 +32,7 @@ devinettes=result_questions.riddles
                 <li>
                     <label for="name">choisir un thème : </label>
                     <select on:change={(event)=>getquestionfromtheme(event.target.value)} name="" id="theme_select">
+                        <option value="">choix theme</option>
                         {#each data.themes as theme , i}
                         <option value="{theme.id}">{theme.name}</option>
                         {/each}
