@@ -1,3 +1,7 @@
+<script>
+    export let data;
+    console.log(data);
+</script>
 <main>
     <section id="gestion">
         <h2>Supprimer un thème</h2>
@@ -6,8 +10,9 @@
                 <li>
                     <label for="name">choisir le thème : </label>
                     <select name="" id="theme_select">
-                        <option value="html">html</option>
-                        <option value="js">javascript</option>
+                        {#each data.themes as  theme , i}
+                        <option value="{theme.id}">{theme.name}</option>
+                        {/each}
                     </select>
                 </li>
             </ul>
