@@ -21,10 +21,11 @@ function toggleNav() {
     <img src={logo} alt="Logo" id="logo">
     <button id="burgerMenu" on:click={toggleMenu}>☰</button>
     <nav id="topNav">
-      <a on:click={toggleNav} href="/" class="active">Accueil</a>
+      <a on:click={toggleNav} href="/">Accueil</a>
       <a on:click={toggleNav} href="/login">Connexion</a>
       <a on:click={toggleNav} href="/register">Inscription</a>
       <a on:click={toggleNav} href="/profil">Profil</a>
+      <a on:click={toggleNav} href="/quiz/connecter">Quiz</a>
     </nav>
   </header>
   <slot> </slot>         

@@ -1,22 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
    
+    document.getElementById('valider').addEventListener('click', () => {
+
+        const reponses = [
+            document.getElementById('reponse1').value,
+            document.getElementById('reponse2').value,
+            document.getElementById('reponse3').value,
+            document.getElementById('reponse4').value,
+            document.getElementById('reponse5').value,
+        ];
+      
+        // Here, you can process the answers
+        console.log(reponses);
+    });
+      
+    document.getElementById('indice').addEventListener('click', () => {
+        // Display a hint for the question
+        // This functionality requires a backend or additional logic to work correctly
+        console.log('Hint requested');
+    });
+
+    // Logic to validate the answers
+
     const burgerMenu = document.getElementById('burgerMenu');
     const nav = document.getElementById('topNav');
 
-    burgerMenu.addEventListener('click', function() {
+    burgerMenu.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
     });
 
     const navLinks = nav.getElementsByTagName('a');
-    for (const i = 0; i < navLinks.length; i++) {
-        navLinks[i].addEventListener('click', function() {
+    for (const link of navLinks) {
+        link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
                 nav.classList.remove('nav-active');
             }
         });
     }
 
-  
     const tbody = document.querySelector('#scoreboard tbody');
     for (let i = 0; i < 3; i++) {
         const tr = document.createElement('tr');
@@ -24,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tbody.appendChild(tr);
     }
 
-   
     const loginForm = document.querySelector('.login-form');
 
     if (loginForm) {
@@ -34,11 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.querySelector('#email').value;
             const password = document.querySelector('#password').value;
 
-            if(email.trim() === '' || password.trim() === '') {
-                alert('Veuillez remplir tous les champs.');
+            if (email.trim() === '' || password.trim() === '') {
+                alert('Please fill in all fields.');
             } else {
-                console.log('Formulaire prêt à être envoyé');
-               
+                console.log('Form ready to be submitted');
             }
         });
     }
