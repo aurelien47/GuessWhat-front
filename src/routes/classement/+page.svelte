@@ -1,13 +1,13 @@
 <main>
-    <section>
+    <section class="view_profil">
     <h1>Classement</h1>
     
-        <ul class="view.profil">
+        <ul class="ranking">
             
-                <li class="entete.profil">Rang</li>
-                <li class="entete.profil">Pseudo</li>
-                <li class="entete.profil">Score</li>
-                <li class="entete.profil">Date de la partie</li>
+                <li class="entete_profil">Rang</li>
+                <li class="entete_profil">Pseudo</li>
+                <li class="entete_profil">Score</li>
+                <li class="entete_profil">Date de la partie</li>
         </ul>
         <ul class="ranking">
                 <li >1</li>
