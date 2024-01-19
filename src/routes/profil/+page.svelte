@@ -6,12 +6,11 @@
         
             
                 <ul class="view_profil">
-                    <li class="entete">Pseudo :</li>
-                    <li class="entete">Date enregistrement :</li>
-                    <li class="entete">Adresse mail :</li>
+                    <li class="entete_profil">Pseudo :</li>
+                    <li class="entete_profil">Date enregistrement :</li>
+                    <li class="entete_profil">Adresse mail :</li>
                 </ul>
-                <ul class="view_profil">
-                    
+                <ul class="view_profil">   
                     <li>Toto</li>
                     <li>01/01/2024</li>
                     <li>moadressemail@gmail.com</li>

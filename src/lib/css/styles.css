@@ -417,8 +417,14 @@
       margin: auto;
     }
 
-    .entete.profil {
+    .entete_profil {
       width: 200px;
+      color: #FFCD29;
+    }
+
+    li {
+      text-align: center;
+      display: inline-flex;
     }
     
     /* FIN PAGE PROFIL UITLISATEUR */
@@ -436,31 +442,40 @@
 
     /* PAGE CLASSEMENT */
 
-    .view_ranking {
-      width: 480px;
+    .view_profil {
+      width: 550px;
       margin: auto;
     }
 
     .ranking {
-      width: 500px;
+      width: 600px;
       margin: 10px 10px;
       list-style-type: none;
       display: flex;
       flex-direction: row;
     }
 
-    .entete {
+    .entete_profil {
       display: table-cell; /* affichage en ligne */
       color: #FFCD29;
       margin: 10px 10px;
     }
 
+    ul {
+      background-color: #677A91;
+    }
+
     li {
-      width: 125px;
-      display: table-cell; /* affichage en ligne */
+      flex: 1;
+      
+      display: inline-flex; /* affichage en ligne */
       color: #FFFFFF;
       margin: 10px 10px;
-      text-align: left;
+      justify-content: center;
+    }
+
+    .larg {
+      flex-grow: 2;
     }
 
     /* FIN PAGE CLASSEMENT */
