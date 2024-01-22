@@ -5,7 +5,7 @@
 <main>
     <section id="gestion">
         <h2>Ajouter une devinette</h2>
-        <form class="formulaire" action="" method="">
+        <form class="formulaire" action="" method="POST">
             <ul>
                 <li>
                     <label for="name">choisir le thème : </label>
@@ -18,14 +18,14 @@
 
                 <li>
                     <label for="name">texte devinette : </label>
-                    <textarea id="story" name="story" rows="5" cols="23">
+                    <textarea id="content" name="story" placeholder="Lorem ipsum..." rows="5" cols="23">
                         Lorem ipsum...
                     </textarea>
                 </li>
 
                 <li>
                     <label for="name">indice : </label>
-                    <input type="text" id="name" name="user_name" />
+                    <input type="text" id="indicator" name="user_name" />
                 </li>
 
                 <h3>Propositions de réponse</h3>

@@ -218,11 +218,6 @@
     overflow: hidden;
   }
 
-  #
-
-
-
-
   #scoreboard h2 {
     background-color: #2C3E50;
     text-align: center;
@@ -439,6 +434,16 @@
       float: left;
     }
     /* FIN PARTIE ADMIN */
+
+    /* PAGE SUPP DEVINETTE */
+    .formsuppdevi {
+      width: auto;
+    }
+
+    .formsuppdevi li {
+      flex-direction: column;
+    }
+    /* FIN PAGE SUPP DEVINETTE */
 
     /* PAGE PROFIL UITLISATEUR */
 
