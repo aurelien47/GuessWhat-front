@@ -53,6 +53,6 @@ devinettes=result_questions.riddles
                 </li>
             </ul>
         </form>
-        <button id="playButton">Valider</button>
+        
     </section>
   </main>
