@@ -11,10 +11,11 @@
           <input type="password" id="password" name="password" required>
         </div>
         <div class="form-control">
-          <button type="submit">Se connecter
-  </button>
+          <button type="submit" onclick="src/routes/game/connecter/+page.svelte" >Se connecter</button>
           <a href="#" class="password-forgot">Mot de passe oublié?</a>
         </div>
       </form>
     </div>
   </main>
+
+
