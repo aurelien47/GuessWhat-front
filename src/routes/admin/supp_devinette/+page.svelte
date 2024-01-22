@@ -43,6 +43,7 @@ devinettes=result_questions.riddles
                 <ul>
                 <li>
                     <label for="name">choisir une devinette : </label>
+
                     {#each data.devinettes as devinette , i}
                     <textarea id="" name="" rows="5" cols="33">
                         {devinette.content}
@@ -50,6 +51,7 @@ devinettes=result_questions.riddles
                     {/each}
                     <button id="{devinette.id}">effacer</button>
                     
+
                 </li>
                 
             </ul>

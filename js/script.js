@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('reponse4').value,
             document.getElementById('reponse5').value,
         ];
-      
+        let scores = [
+            { id: 1, score: 100, rank: 1 },
+            { id: 2, score: 90, rank: 2 },
+            { id: 3, score: 80, rank: 3 },
+          ];
         // Here, you can process the answers
         console.log(reponses);
     });

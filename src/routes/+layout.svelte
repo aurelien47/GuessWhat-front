@@ -25,7 +25,7 @@ function toggleNav() {
       <a on:click={toggleNav} href="/login">Connexion</a>
       <a on:click={toggleNav} href="/register">Inscription</a>
       <a on:click={toggleNav} href="/profil">Profil</a>
-      <a on:click={toggleNav} href="/quiz/connecter">Quiz</a>
+    
     </nav>
   </header>
   <slot> </slot>         
