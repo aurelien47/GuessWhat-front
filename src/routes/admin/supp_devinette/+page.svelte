@@ -27,7 +27,7 @@ devinettes=result_questions.riddles
 <main>
     <section id="gestion">
         <h2>Supprimer une devinette</h2>
-        <form class="formulaire" action="" method="">
+        <form class="formsuppdevi" action="" method="">
             <ul>
                 <li>
                     <label for="name">choisir un thème : </label>
@@ -38,19 +38,17 @@ devinettes=result_questions.riddles
                         {/each}
                     </select>
                 </li>
-                </ul>
-
-                <ul>
+                
                 <li>
                     <label for="name">choisir une devinette : </label>
 
-                    {#each data.devinettes as devinette , i}
+                    {#each devinettes as devinette , i}
                     <textarea id="" name="" rows="5" cols="33">
                         {devinette.content}
                     </textarea>
-                    {/each}
-                    <button id="{devinette.id}">effacer</button>
                     
+                    <button id="{devinette.id}">effacer</button>
+                    {/each}
 
                 </li>
                 
