@@ -1,3 +1,7 @@
+<script>
+    export let data;
+    console.log(data);
+</script>
 <main>
     <section id="gestion">
         <h2>Ajouter une devinette</h2>
@@ -6,8 +10,9 @@
                 <li>
                     <label for="name">choisir le thème : </label>
                     <select name="" id="theme_select">
-                        <option value="html">html</option>
-                        <option value="js">javascript</option>
+                        {#each data.themes as  theme , i}
+                        <option value="{theme.id}">{theme.name}</option>
+                        {/each}
                     </select>
                 </li>
 
@@ -50,13 +55,15 @@
                     <input type="text" id="rep5" name="user_name" />
                     
                 </li>
+                <li>
+                    <label for="name">Lien wiki : </label>
+                    <input type="text" id="wiki" name="user_name" />
+                    
+                </li>
             </ul>
         </form>
         
-        <aside>
-            <button id="wiki">Lien wiki</button>
-        </aside>
-
+        
         <button id="playButton">Valider</button>
     </section>
   </main>
