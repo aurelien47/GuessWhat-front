@@ -38,18 +38,24 @@ devinettes=result_questions.riddles
                         {/each}
                     </select>
                 </li>
+                </ul>
 
+                <ul>
                 <li>
                     <label for="name">choisir une devinette : </label>
-                    <select name="" id="devinette_select">
-                        <option value="">choix devinette</option>
-                        {#each devinettes as  devinette , i}
-                        <option value="{devinette.id}">{devinette.content}</option>
-                        {/each}
-                    </select>
+
+                    {#each data.devinettes as devinette , i}
+                    <textarea id="" name="" rows="5" cols="33">
+                        {devinette.content}
+                    </textarea>
+                    {/each}
+                    <button id="{devinette.id}">effacer</button>
+                    
+
                 </li>
+                
             </ul>
         </form>
-        <button id="playButton">Valider</button>
+        
     </section>
   </main>
