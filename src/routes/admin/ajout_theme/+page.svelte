@@ -5,10 +5,11 @@
             <ul>
                 <li>
                     <label for="name">choisir un nom&nbsp;:</label>
-                    <input type="text" id="themename" name="theme_name" />
+                    <input type="text" id="themename" name="name" />
                 </li>
             </ul>
+            <button type="submit">Valider</button>
         </form>
-        <button type="submit">Valider</button>
+        
     </section>
   </main>
