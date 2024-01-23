@@ -27,7 +27,11 @@ function toggleNav() {
       <a on:click={toggleNav} href="/login">Connexion</a>
       <a on:click={toggleNav} href="/register">Inscription</a>
       <a on:click={toggleNav} href="/profil">Profil</a>
-      <a on:click={toggleNav} href="/logout">Déconnexion</a>
+  
+
+      <form action="/logout" method="post">
+        <button type="submit">Déconnexion</button>
+      </form>
     </nav>
   </header>
   <slot> </slot>         
