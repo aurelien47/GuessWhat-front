@@ -6,7 +6,7 @@
    import { goto } from '$app/navigation';
 
   function playGame() {
-    goto('/game/visiteur'); // Assurez-vous que ce chemin correspond à l'URL de votre page de jeu
+    goto('/game/visiteur'); 
   }
 
 
@@ -26,7 +26,7 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Les lignes du tableau seront ajoutées ici par JavaScript -->
+          
           </tbody>
         </table>
         <table id="scoreboard">

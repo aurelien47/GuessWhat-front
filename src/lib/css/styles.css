@@ -548,26 +548,45 @@
 
 .theme-chooser,
 .user-profile,
-.question-box,
-.score-box,
-.hint-box {
+.question-box{
   /* Styles communs pour les div */
   background: #fff; /* Fond blanc pour les div */
-  padding: 10px; /* Espace intérieur pour les div */
-  border-radius: 5px; /* Coins arrondis pour les div */
-  margin-bottom: 10px; /* Espace sous chaque div */
+  padding: 60px;
+  width: 350px; /* Espace intérieur pour les div */
+  margin-bottom: 0px;
 }
+
+
+.score-box
+{
+  /* Styles communs pour les div */
+  background: #fff; /* Fond blanc pour les div */
+  padding: 20px;
+  width: 200px; ; /* Espace intérieur pour les div */
+  margin-left: 70px;
+}
+
+
+.hint-box {
+  background: #fff; /* Fond blanc pour les div */
+  padding: 20px;
+  width: 200px; ; /* Espace intérieur pour les div */
+  margin-left: -10px;
+}
+.hint-box button,
+
+
 
 .theme-chooser select,
 .question-box textarea,
 .score-box textarea {
   width: 100%; /* Utilisez toute la largeur du parent */
-  padding: 10px; /* Espace intérieur pour les éléments de formulaire */
+  padding: 20px; /* Espace intérieur pour les éléments de formulaire */
   border-radius: 5px; /* Coins arrondis pour les éléments de formulaire */
   border: 1px solid #ccc; /* Bordure pour les éléments de formulaire */
 }
 
-.hint-box button,
+
 .answers-box input,
 .validate-button {
   width: 100%; /* Utilisez toute la largeur du parent */

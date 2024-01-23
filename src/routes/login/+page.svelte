@@ -15,16 +15,10 @@
           <button type="submit">Se connecter</button>
           <a href="password-forgot">Mot de passe oublié?</a>
 
-          <button type="submit" onclick="src/routes/game/connecter/+page.svelte" >Se connecter</button>
-          <a href="#" class="password-forgot">Mot de passe oublié?</a>
-
         </div>
       </form>
     </div>
   </main>
 
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> 591afa79ebbaca3c005d0aae0efc972b35ee7366
+
