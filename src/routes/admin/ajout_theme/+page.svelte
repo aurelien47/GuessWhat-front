@@ -1,14 +1,15 @@
 <main>
     <section id="gestion">
         <h2>Ajouter un thème</h2>
-        <form class="formulaire" action="" method="">
+        <form class="formajouttheme" action="" method="post">
             <ul>
                 <li>
                     <label for="name">choisir un nom&nbsp;:</label>
-                    <input type="text" id="name" name="user_name" />
+                    <input type="text" id="themename" name="name" />
                 </li>
             </ul>
+            <button type="submit">Valider</button>
         </form>
-        <button id="playButton">Valider</button>
+        
     </section>
   </main>

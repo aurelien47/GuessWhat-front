@@ -204,6 +204,72 @@
     font-size: 16px;
     margin-top: 20px;
   }
+
+
+
+  #scoreboard {
+    width: 80%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background-color: #677A91;
+    color: #FFCD29;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #scoreboard h2 {
+    background-color: #2C3E50;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+  }
+
+  #scoreboard table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+  }
+
+  #scoreboard th,
+  #scoreboard td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #2C3E50;
+  }
+
+  #scoreboard th {
+    background-color: #2C3E50;
+    color: #FFCD29;
+  }
+
+  #scoreboard tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  #scoreboard tbody tr:nth-child(odd) {
+    background-color: #5d708a; /* Slightly lighter color for the odd rows */
+  }
+
+  #scoreboard td {
+    background-color: transparent; /* Remove background-color for cells */
+  }
+
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    #scoreboard {
+      width: 90%;
+      margin: 1rem;
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+
+
+
+
+
   
   /* Styles pour le lien "Mot de passe oublié" */
   .password-forgot {
@@ -369,6 +435,16 @@
     }
     /* FIN PARTIE ADMIN */
 
+    /* PAGE SUPP DEVINETTE */
+    .formsuppdevi {
+      width: auto;
+    }
+
+    .formsuppdevi li {
+      flex-direction: column;
+    }
+    /* FIN PAGE SUPP DEVINETTE */
+
     /* PAGE PROFIL UITLISATEUR */
 
     h1 {
@@ -472,26 +548,45 @@
 
 .theme-chooser,
 .user-profile,
-.question-box,
-.score-box,
-.hint-box {
+.question-box{
   /* Styles communs pour les div */
   background: #fff; /* Fond blanc pour les div */
-  padding: 10px; /* Espace intérieur pour les div */
-  border-radius: 5px; /* Coins arrondis pour les div */
-  margin-bottom: 10px; /* Espace sous chaque div */
+  padding: 60px;
+  width: 350px; /* Espace intérieur pour les div */
+  margin-bottom: 0px;
 }
+
+
+.score-box
+{
+  /* Styles communs pour les div */
+  background: #fff; /* Fond blanc pour les div */
+  padding: 20px;
+  width: 200px; ; /* Espace intérieur pour les div */
+  margin-left: 70px;
+}
+
+
+.hint-box {
+  background: #fff; /* Fond blanc pour les div */
+  padding: 20px;
+  width: 200px; ; /* Espace intérieur pour les div */
+  margin-left: -10px;
+}
+.hint-box button,
+
+
 
 .theme-chooser select,
 .question-box textarea,
 .score-box textarea {
   width: 100%; /* Utilisez toute la largeur du parent */
-  padding: 10px; /* Espace intérieur pour les éléments de formulaire */
+  padding: 20px; /* Espace intérieur pour les éléments de formulaire */
   border-radius: 5px; /* Coins arrondis pour les éléments de formulaire */
   border: 1px solid #ccc; /* Bordure pour les éléments de formulaire */
 }
 
-.hint-box button,
+
 .answers-box input,
 .validate-button {
   width: 100%; /* Utilisez toute la largeur du parent */

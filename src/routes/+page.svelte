@@ -2,6 +2,14 @@
 <script>
   
     let lignes = new Array(3).fill({id: "—", score: "—", rank: "—"});
+
+   import { goto } from '$app/navigation';
+
+  function playGame() {
+    goto('/game/visiteur'); 
+  }
+
+
   
 
   </script>
@@ -18,7 +26,7 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Les lignes du tableau seront ajoutées ici par JavaScript -->
+          
           </tbody>
         </table>
         <table id="scoreboard">
@@ -45,7 +53,8 @@
          Prêts à coder votre chemin à travers les énigmes? Que l'aventure commence!"</p>
         
   
-      <button id="playButton">Jouer</button>
+      <button id="playButton" on:click={playGame}>Jouer</button>
+      
     
   </main>
   

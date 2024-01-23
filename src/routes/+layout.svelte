@@ -16,6 +16,8 @@ function toggleNav() {
             }
 }
 
+
+
 </script>
   <header>
     <img src={logo} alt="Logo" id="logo">
@@ -25,7 +27,7 @@ function toggleNav() {
       <a on:click={toggleNav} href="/login">Connexion</a>
       <a on:click={toggleNav} href="/register">Inscription</a>
       <a on:click={toggleNav} href="/profil">Profil</a>
-      <a on:click={toggleNav} href="/quiz/connecter">Quiz</a>
+      <a on:click={toggleNav} href="/logout">Déconnexion</a>
     </nav>
   </header>
   <slot> </slot>         

@@ -11,10 +11,14 @@
           <input type="password" id="password" name="password" required>
         </div>
         <div class="form-control">
-          <button type="submit">Se connecter
-  </button>
-          <a href="#" class="password-forgot">Mot de passe oublié?</a>
+
+          <button type="submit">Se connecter</button>
+          <a href="password-forgot">Mot de passe oublié?</a>
+
         </div>
       </form>
     </div>
   </main>
+
+
+
