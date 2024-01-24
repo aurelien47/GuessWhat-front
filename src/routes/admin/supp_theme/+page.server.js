@@ -7,7 +7,7 @@ if (!token) {
     redirect(303, '/');
 }
 
-const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
+const reponse = await fetch (`https://guesswhat-api.onrender.com/admin/theme/${theme.id}`, {
            method: "GET",
            headers: {
             "Content-Type": "application/json",

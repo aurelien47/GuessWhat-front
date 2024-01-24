@@ -1,5 +1,6 @@
 <script>
     export let data;
+    export let form;
     console.log(data);
 </script>
 <main>
@@ -25,7 +26,7 @@
 
                 <li>
                     <label for="name">indice : </label>
-                    <input type="text" id="indicator" name="user_name" />
+                    <input type="text" id="indicator" name="indicator" />
                 </li>
 
                 <h3>Propositions de réponse</h3>
@@ -61,6 +62,15 @@
                     
                 </li>
             </ul>
+            {#if form && form.result.status === 'success'}
+                <p class="succes">La devinette à bien été enregistrée</p>
+            {/if}
+
+            {#if form && form.result.error}
+                <p class="error">{form.result.error}</p>
+            {/if}
+
+            
             <button type="submit">Valider</button>
         </form>
         
@@ -68,3 +78,13 @@
         
     </section>
   </main>
+
+  <style>
+    .error {
+        color: red;
+    }
+
+    .succes {
+        color: green;
+    }
+  </style>

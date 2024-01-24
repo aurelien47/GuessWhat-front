@@ -12,9 +12,7 @@ const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
            headers: {
             "Content-Type": "application/json",
             // 'Content-Type': 'application/x-www-form-urlencoded',
-          },
-           
-           
+          },                     
         });
         const result = await reponse.json();
         console.log(result);
@@ -31,12 +29,27 @@ export const actions = {
   default: async ({ request,cookies }) => {
       const data = await request.formData();
       const theme = data.get ('theme')
-      const name = data.get ('name')
-      const content = data.get ('content')
-      const indicator = data.get ('indicator')
-      const is_good_answer = data.get ('is_good_answer')
-      const wiki = data.get ('wiki')
+      
+      const content = data.get ('content')  // contenu de la devinette
+      const indicator = data.get ('indicator')  // indice
+      // const answers recupere les is_good_answer en tableau
+      const answers = data.getAll ('is_good_answer').map((answer, index) => {
+        if(index === 0) {
+          return {
+             content : answer,
+           is_good_answer: true //la 1ere réponse récupérée est la bonne
+          }
+        }else{
+             return {
+             content : answer,
+           is_good_answer: false   //les autres réponses récupérées sont fausse
+          }
+       
+        }
+      })
+      const wiki = data.get ('wiki')   // lien wiki
       const token = cookies.get("token");
+      //console.log(answers);
       const reponse = await fetch (`https://guesswhat-api.onrender.com/admin/theme/${theme}/riddle`, {
          method: "POST",
          headers: {
@@ -45,10 +58,10 @@ export const actions = {
           "Authorization": "Bearer " + token
         },
          body:JSON.stringify({ 
-          name,
+          
           content,
           indicator,
-          is_good_answer,
+          answers,
           wiki,
           })
          
@@ -56,5 +69,6 @@ export const actions = {
 
       const result = await reponse.json();
       console.log(result);
+      return{result}
 }
 };
