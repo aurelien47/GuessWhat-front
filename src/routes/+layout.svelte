@@ -1,6 +1,6 @@
 <script>
   import logo from '$lib/assets/images/Logo Guess What.png';
-import '$lib/css/styles.css';
+  import '$lib/css/styles.css';
 
 function toggleMenu() {
   const nav = document.getElementById('topNav');
@@ -15,6 +15,10 @@ function toggleNav() {
                 nav.classList.remove('nav-active');
             }
 }
+
+
+
+
 
 
 
@@ -43,3 +47,14 @@ function toggleNav() {
     <a href="legal.html">Légale</a>
     <a href="cgu.html">CGU</a>
   </footer>
+
+
+  <style>
+    /* Styles pour le bouton de d
+
+
+
+
+      
+  </style>
+   
