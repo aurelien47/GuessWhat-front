@@ -16,10 +16,11 @@
                     </select>
                 </li>
             </ul>
+            <button id="playButton">Valider</button>
         </form>
         <aside>
            <p>Attention les questions du thème seront supprimées aussi!</p>
         </aside>
-        <button id="playButton">Valider</button>
+        
     </section>
   </main>

@@ -9,7 +9,7 @@
             <ul>
                 <li>
                     <label for="name">choisir le thème : </label>
-                    <select name="" id="theme_select">
+                    <select name="theme" id="theme_select">
                         {#each data.themes as  theme , i}
                         <option value="{theme.id}">{theme.name}</option>
                         {/each}
@@ -18,8 +18,8 @@
 
                 <li>
                     <label for="name">texte devinette : </label>
-                    <textarea id="content" name="story" placeholder="Lorem ipsum..." rows="5" cols="23">
-                        Lorem ipsum...
+                    <textarea id="content" name="content" rows="5" cols="23">
+                        
                     </textarea>
                 </li>
 
@@ -32,38 +32,39 @@
 
                 <li>
                     <label for="name">Bonne réponse : </label>
-                    <input type="text" id="rep1" name="user_name" />
+                    <input type="text" id="rep1" name="is_good_answer" />
                     
                 </li>
                 <li>
                     <label for="name">Mauvaise réponse : </label>
-                    <input type="text" id="rep2" name="user_name" />
+                    <input type="text" id="rep2" name="is_good_answer" />
                     
                 </li>
                 <li>
                     <label for="name">Mauvaise réponse : </label>
-                    <input type="text" id="rep3" name="user_name" />
+                    <input type="text" id="rep3" name="is_good_answer" />
                     
                 </li>
                 <li>
                     <label for="name">Mauvaise réponse : </label>
-                    <input type="text" id="rep4" name="user_name" />
+                    <input type="text" id="rep4" name="is_good_answer" />
                     
                 </li>
                 <li>
                     <label for="name">Mauvaise réponse : </label>
-                    <input type="text" id="rep5" name="user_name" />
+                    <input type="text" id="rep5" name="is_good_answer" />
                     
                 </li>
                 <li>
                     <label for="name">Lien wiki : </label>
-                    <input type="text" id="wiki" name="user_name" />
+                    <input type="text" id="wiki" name="wiki" />
                     
                 </li>
             </ul>
+            <button type="submit">Valider</button>
         </form>
         
         
-        <button id="playButton">Valider</button>
+        
     </section>
   </main>
