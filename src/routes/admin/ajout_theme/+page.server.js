@@ -1,16 +1,17 @@
 export const actions = {
-    default: async ({ request }) => {
-        const data = await request.forData();
-        const nametheme = data.get ('theme_name')
-
-        const reponse = await fetch ('https://guesswhat-api.onrender.com/ajout_theme', {
+    default: async ({ request,cookies }) => {
+        const data = await request.formData();
+        const name = data.get ('name')
+        const token = cookies.get("token");
+        const reponse = await fetch ('https://guesswhat-api.onrender.com/admin/theme', {
            method: "POST",
            headers: {
             "Content-Type": "application/json",
             // 'Content-Type': 'application/x-www-form-urlencoded',
+            "Authorization": "Bearer " + token
           },
            body:JSON.stringify({ 
-            nametheme,
+            name,
             })
            
         });
