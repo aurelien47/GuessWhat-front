@@ -1,5 +1,6 @@
 <script>
     export let data;
+    export let form;
     console.log(data);
 </script>
 <main>
@@ -16,7 +17,10 @@
                     </select>
                 </li>
             </ul>
-            <button id="playButton">Valider</button>
+
+
+            
+            <button type="submit">Valider</button>
         </form>
         <aside>
            <p>Attention les questions du thème seront supprimées aussi!</p>
