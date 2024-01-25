@@ -34,6 +34,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    align-items:  center;
+
   }
   
   nav a {
@@ -42,6 +44,18 @@
     padding: 0 10px;
     line-height: 70px;
   }
+
+
+  button, .nav-button {
+    background-color: #677A91; /* Couleur de fond */
+    color: #FFCD29; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Padding */
+    margin: 0 10px; /* Marge */
+    cursor: pointer; /* Curseur en forme de main */
+    /* Ajoutez d'autres styles comme la taille de la police, le rayon de la bordure, etc. */
+  }
+
 
   
   
@@ -619,4 +633,19 @@
   color: #E74C3C;
   font-size: 14px;
   margin-top: 5px;
+}
+
+/* Styles par défaut pour la barre de navigation */
+#topNav {
+  transition: opacity 0.5s ease; /* Effet de transition pour l'opacité */
+  opacity: 0; /* Rendre la barre de navigation transparente */
+  /* Ajouter d'autres styles comme position, width, etc. */
+  position: fixed; /* La barre de navigation est fixée */
+  width: 100%; /* Largeur complète */
+  /* ... autres styles ... */
+}
+
+/* Styles pour la barre de navigation lors du survol */
+#topNav:hover {
+  opacity: 1; /* Rendre la barre de navigation visible lors du survol */
 }

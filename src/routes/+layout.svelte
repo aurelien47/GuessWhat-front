@@ -1,6 +1,6 @@
 <script>
   import logo from '$lib/assets/images/Logo Guess What.png';
-  import '$lib/css/styles.css';
+import '$lib/css/styles.css';
 
 function toggleMenu() {
   const nav = document.getElementById('topNav');
@@ -17,11 +17,6 @@ function toggleNav() {
 }
 
 
-
-
-
-
-
 </script>
   <header>
     <img src={logo} alt="Logo" id="logo">
@@ -31,8 +26,7 @@ function toggleNav() {
       <a on:click={toggleNav} href="/login">Connexion</a>
       <a on:click={toggleNav} href="/register">Inscription</a>
       <a on:click={toggleNav} href="/profil">Profil</a>
-  
-
+      <a on:click={toggleNav} href="/game/connecter">Game</a>
       <form action="/logout" method="post">
         <button type="submit">Déconnexion</button>
       </form>
@@ -41,20 +35,8 @@ function toggleNav() {
   <slot> </slot>         
 
 
-
   <footer>
     <a href="contact.html">Contact</a>
     <a href="legal.html">Légale</a>
     <a href="cgu.html">CGU</a>
   </footer>
-
-
-  <style>
-    /* Styles pour le bouton de d
-
-
-
-
-      
-  </style>
-   
