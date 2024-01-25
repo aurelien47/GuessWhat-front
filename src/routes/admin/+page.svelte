@@ -1,9 +1,11 @@
 <main>
     <section id="gestion">
         <h2>ADMIN</h2>
-        <button class="gestion" id="ajouttheme">Ajouter un thème</button>
-        <button class="gestion" id="supprimtheme">Supprimer un thème</button>
-        <button class="gestion" id="ajoutdevinette">Ajouter une devinette</button>
-        <button class="gestion" id="supprimdevinette">Supprimer une devinette</button>
+        <ul>
+            <li class="gestion"><a href="/ajout_theme/">Ajouter un thème</a></li>
+            <li class="gestion"><a href="/supp_theme/">Supprimer un thème</a></li>
+            <li class="gestion"><a href="/ajout_devinette">Ajouter une devinette</a></li>
+            <li class="gestion"><a href="/sup_devinette">Supprimer une devinette</a></li>
+        </ul>
       </section>
   </main>

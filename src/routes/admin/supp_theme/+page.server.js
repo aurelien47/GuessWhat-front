@@ -15,7 +15,7 @@ const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
           },                     
         });
         const result = await reponse.json();
-        console.log(result);
+        //console.log(result);
   
 	return {
 		themes:result
@@ -23,15 +23,7 @@ const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
 }
 // fin affichage des thème dans la liste déroulante
 
-// on efface le theme choisi
-const effacetheme = await fetch ('https://guesswhat-api.onrender.com/admin/theme/${theme.id}', {
-           method: "DELETE",
-           headers: {
-            "Content-Type": "application/json",
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-          },                     
-        });
-        const result = await effacetheme.json();
-        console.log(result);
-  
-	return {result};
+// récupération de l'id du theme pour l'effacer
+
+
+// Fin récupération de l'id du theme pour l'effacer
