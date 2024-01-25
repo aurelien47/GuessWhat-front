@@ -453,8 +453,8 @@
       margin-bottom: 10px;  
     }
 
-    .profil {
-      width: 680px;
+    .profilutilisateur {
+      width: 500px;
       color: #FFCD29;
     }
     
@@ -463,19 +463,20 @@
       margin-bottom: 10px;
     }
 
-    .view_profil {
-      width: 600px;
+    .util_profilutilisateur {
+      width: 250px;
+      height: auto;
       margin: auto;
     }
 
-    .entete_profil {
+    .entete_profilutilisateur {
+      justify-content: center;
       width: 200px;
       color: #FFCD29;
     }
 
     li {
-      text-align: center;
-      display: inline-flex;
+      justify-content: center;
     }
     
     /* FIN PAGE PROFIL UITLISATEUR */

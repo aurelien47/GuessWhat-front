@@ -1,19 +1,23 @@
 <main>
     
-    <section class="profil">
+    <section class="profilutilisateur">
         <h1>Votre profil</h1>
         
         
             
-                <ul class="view_profil">
-                    <li class="entete_profil">Pseudo :</li>
-                    <li class="entete_profil">Date enregistrement :</li>
-                    <li class="entete_profil">Adresse mail :</li>
-                </ul>
-                <ul class="view_profil">   
+                <ul class="util_profilutilisateur">
+                    <li class="entete_profilutilisateur">Pseudo :</li>
                     <li>Toto</li>
+                </ul>
+
+                <ul class="util_profilutilisateur">
+                    <li class="entete_profilutilisateur">Date enregistrement :</li>
                     <li>01/01/2024</li>
-                    <li>moadressemail@gmail.com</li>
+                </ul>   
+                
+                <ul class="util_profilutilisateur">   
+                    <li class="entete_profilutilisateur">Adresse mail :</li>                   
+                    <li>monadressemail@gmail.com</li>
                 </ul>             
             
            

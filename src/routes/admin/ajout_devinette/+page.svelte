@@ -62,6 +62,9 @@
                     
                 </li>
             </ul>
+
+
+
             {#if form && form.result.status === 'success'}
                 <p class="succes">La devinette à bien été enregistrée</p>
             {/if}
