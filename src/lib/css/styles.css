@@ -635,17 +635,3 @@
   margin-top: 5px;
 }
 
-/* Styles par défaut pour la barre de navigation */
-#topNav {
-  transition: opacity 0.5s ease; /* Effet de transition pour l'opacité */
-  opacity: 0; /* Rendre la barre de navigation transparente */
-  /* Ajouter d'autres styles comme position, width, etc. */
-  position: fixed; /* La barre de navigation est fixée */
-  width: 100%; /* Largeur complète */
-  /* ... autres styles ... */
-}
-
-/* Styles pour la barre de navigation lors du survol */
-#topNav:hover {
-  opacity: 1; /* Rendre la barre de navigation visible lors du survol */
-}

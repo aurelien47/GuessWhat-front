@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 
-export function load({ cookies }) {
+export async function  load({ cookies }) {
 
 const token = cookies.get("token");
 if (!token) {
@@ -8,10 +8,19 @@ if (!token) {
 }
 
     console.log(cookies.get("token"));
+	const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
+		method: "GET",
+		headers: {
+		 "Content-Type": "application/json",
+		 // 'Content-Type': 'application/x-www-form-urlencoded',
+	   },                     
+	 });
+	 const result = await reponse.json();
+	 console.log(result);
 
-	return {
-		// user: {
-        //     // données qui viennent du back
-		// }
+ return {
+	 themes:result
+ };
+
+	
 	};
-}
