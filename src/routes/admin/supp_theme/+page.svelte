@@ -1,6 +1,6 @@
 <script>
     export let data;
-    
+    //export let form;
     console.log(data);
 </script>
 <main>
@@ -17,9 +17,6 @@
                     </select>
                 </li>
             </ul>
-
-
-            
             <button type="submit">Valider</button>
         </form>
         <aside>

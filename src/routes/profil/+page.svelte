@@ -1,3 +1,9 @@
+<script>
+    export let data;
+
+    const maDate = data.user.createdAt
+    maDate.toLocateDateString("fr")
+</script>
 <main>
     
     <section class="profilutilisateur">
@@ -7,20 +13,19 @@
             
                 <ul class="util_profilutilisateur">
                     <li class="entete_profilutilisateur">Pseudo :</li>
-                    <li>Toto</li>
+                    <li>{data.user.username}</li>
+                </ul>
+
+                <ul class="util_profilutilisateur">
+                    <li class="entete_profilutilisateur">Email :</li>
+                    <li>{data.user.email}</li>
                 </ul>
 
                 <ul class="util_profilutilisateur">
                     <li class="entete_profilutilisateur">Date enregistrement :</li>
-                    <li>01/01/2024</li>
+                    <li>{maDate}</li>
                 </ul>   
-                
-                <ul class="util_profilutilisateur">   
-                    <li class="entete_profilutilisateur">Adresse mail :</li>                   
-                    <li>monadressemail@gmail.com</li>
-                </ul>             
-            
-           
+                           
 
         <button id="changemdp">Changer de mot de passe</button>
     </section>    
