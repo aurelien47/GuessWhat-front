@@ -1,5 +1,6 @@
 <script>
     export let data;
+    //export let form;
     console.log(data);
 </script>
 <main>
@@ -9,17 +10,18 @@
             <ul>
                 <li>
                     <label for="name">choisir le thème : </label>
-                    <select name="" id="theme_select">
+                    <select name="theme" id="theme_select">
                         {#each data.themes as  theme , i}
                         <option value="{theme.id}">{theme.name}</option>
                         {/each}
                     </select>
                 </li>
             </ul>
+            <button type="submit">Valider</button>
         </form>
         <aside>
            <p>Attention les questions du thème seront supprimées aussi!</p>
         </aside>
-        <button id="playButton">Valider</button>
+        
     </section>
   </main>

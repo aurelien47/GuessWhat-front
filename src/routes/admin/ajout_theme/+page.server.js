@@ -17,6 +17,6 @@ export const actions = {
         });
 
         const result = await reponse.json();
-        console.log(result);
+        return{result};
 	}
 };

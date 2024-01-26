@@ -14,17 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 2, score: 90, rank: 2 },
             { id: 3, score: 80, rank: 3 },
           ];
-        // Here, you can process the answers
+   
         console.log(reponses);
     });
       
     document.getElementById('indice').addEventListener('click', () => {
-        // Display a hint for the question
-        // This functionality requires a backend or additional logic to work correctly
+      
         console.log('Hint requested');
     });
 
-    // Logic to validate the answers
+
 
     const burgerMenu = document.getElementById('burgerMenu');
     const nav = document.getElementById('topNav');

@@ -27,7 +27,16 @@ export const actions = {
 
           const result = await reponse.json();
           console.log(result);
-
+          if (result.error) {
+            return {
+              status: 401,
+              error: result.error,
+              headers: {
+                location: '/login',
+      
+              },
+            };
+          }
           cookies.set("token", result.token, {
               secure: true,
               httpOnly: true,

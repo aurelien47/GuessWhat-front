@@ -1,3 +1,12 @@
+
+<script>
+  
+
+export let form;
+console.log(form);
+
+</script>
+
 <main>
     <div class="login-container">
       <form method="post" class="login-form">
@@ -12,7 +21,10 @@
         </div>
         <div class="form-control">
 
-          <button type="submit">Se connecter</button>
+         <button type="submit">Se connecter</button>
+   {#if form && form.error}
+          <p class="error">{form.error}</p>
+        {/if}
           <a href="password-forgot">Mot de passe oublié?</a>
 
         </div>
