@@ -1,9 +1,10 @@
 <script>
     export let data;
 
-    const maDate = data.user.createdAt
-    maDate.toLocateDateString("fr")
+    
 </script>
+    
+
 <main>
     
     <section class="profilutilisateur">
@@ -23,7 +24,7 @@
 
                 <ul class="util_profilutilisateur">
                     <li class="entete_profilutilisateur">Date enregistrement :</li>
-                    <li>{maDate}</li>
+                    <li>{data.user.createdAt}</li>
                 </ul>   
                            
 
