@@ -15,6 +15,7 @@
             </ul>
 
 
+
             {#if form && form.result.status === 'success'}
                 <p class="succes">Le theme à bien été enregistré</p>
             {/if}
@@ -23,6 +24,12 @@
                 <p class="error">{form.result.error}</p>
             {/if}
 
+<<<<<<< HEAD
+=======
+ 
+
+
+>>>>>>> 24da6947d7ca0bf6ec028928c6f5883b31469dfa
             <button type="submit">Valider</button>
         </form>
         
