@@ -6,7 +6,7 @@ const token = cookies.get("token");
 if (!token) {
     redirect(303, '/');
 }
-
+// affichage des thèmes dans la liste déroulante
 const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
            method: "GET",
            headers: {
@@ -21,4 +21,31 @@ const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
 		themes:result
 	};
 };
+// fin affichage des thèmes dans la liste déroulante
 
+// suppression d'une devinette
+
+export const actions = {
+  default: async ({ request,cookies }) => {
+      const data = await request.formData();
+      const theme = data.get ('theme')     
+      const token = cookies.get("token");
+      
+      const deletedevi = await fetch (`https://guesswhat-api.onrender.com/admin/theme/${theme}/riddle/${riddle}`, {
+         method: "DELETE",
+         headers: {
+          "Content-Type": "application/json",
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+          "Authorization": "Bearer " + token
+        },        
+         
+      });
+
+      const result = await deletedevi.json();
+      console.log(result);
+      console.log(deletedevi);
+      return{result}
+}
+};
+
+// fin suppression d'une devinette

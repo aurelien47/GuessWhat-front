@@ -1,12 +1,12 @@
 <script>
     export let data;
-    
+    export let form; //pour message d'erreur
     console.log(data);
 </script>
 <main>
     <section id="gestion">
         <h2>Supprimer un thème</h2>
-        <form class="formulaire" action="" method="">
+        <form class="formulaire" action="" method="post">
             <ul>
                 <li>
                     <label for="name">choisir le thème : </label>
@@ -18,8 +18,14 @@
                 </li>
             </ul>
 
+            {#if form && form.result.status === 'success'}
+                <p class="succes">Le thème à bien été effacé</p>
+            {/if}
 
-            
+            {#if form && form.result.error}
+                <p class="error">{form.result.error}</p>
+            {/if}
+
             <button type="submit">Valider</button>
         </form>
         <aside>

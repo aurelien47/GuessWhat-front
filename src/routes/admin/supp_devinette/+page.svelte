@@ -1,6 +1,7 @@
 <script>
     let devinettes = [];
     export let data;
+    export let form;
     console.log(data);
 
     async function getquestionfromtheme ( id ) { 
@@ -17,9 +18,34 @@
  const result_questions = await questions.json();
  console.log(result_questions);
 
-
 devinettes=result_questions.riddles
 
+// suppression d'une devinette
+
+const actions = {
+  default: async ({ request,cookies }) => {
+      const data = await request.formData();
+      const theme = data.get ('theme')     
+      const token = cookies.get("token");
+      
+      const deletedevi = await fetch (`https://guesswhat-api.onrender.com/admin/theme/${id}/riddle/${id}`, {
+         method: "DELETE",
+         headers: {
+          "Content-Type": "application/json",
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+          "Authorization": "Bearer " + token
+        },        
+         
+      });
+
+      const result = await deletedevi.json();
+      console.log(result);
+      console.log(riddle.id);
+      return{result}
+}
+};
+
+// fin suppression d'une devinette
 
 }
 
@@ -27,10 +53,10 @@ devinettes=result_questions.riddles
 <main>
     <section id="gestion">
         <h2>Supprimer une devinette</h2>
-        <form class="formsuppdevi" action="" method="">
+        <form class="formsuppdevi" action="" method="post">
             <ul>
                 <li>
-                    <label for="name">choisir un thème : </label>
+                    <label for="nametheme">choisir un thème : </label>
                     <select on:change={(event)=>getquestionfromtheme(event.target.value)} name="" id="theme_select">
                         <option value="">choix theme</option>
                         {#each data.themes as theme , i}
@@ -38,22 +64,42 @@ devinettes=result_questions.riddles
                         {/each}
                     </select>
                 </li>
-                
+            </ul>
+            
+            <ul>
                 <li>
-                    <label for="name">choisir une devinette : </label>
+                    <label for="namequestion">choisir une devinette : </label>
 
                     {#each devinettes as devinette , i}
-                    <textarea id="" name="" rows="5" cols="33">
+                    <textarea id="" name="question" rows="5" cols="33">
                         {devinette.content}
-                    </textarea>
-                    
-                    <button id="{devinette.id}">effacer</button>
+                    </textarea>                   
                     {/each}
 
-                </li>
-                
+                </li>             
             </ul>
+            
+            {#if form && form.result.status === 'success'}
+                <p class="succes">La question à bien été effacée</p>
+            {/if}
+
+            {#if form && form.result.error}
+                <p class="error">{form.result.error}</p>
+            {/if}
+
+            <button type="submit">Valider</button>
+
         </form>
         
     </section>
   </main>
+
+  <style>
+    .error {
+        color: red;
+    }
+
+    .succes {
+        color: green;
+    }
+  </style>
