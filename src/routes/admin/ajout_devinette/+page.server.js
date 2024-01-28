@@ -6,7 +6,7 @@ const token = cookies.get("token");
 if (!token) {
     redirect(303, '/');
 }
-// affichage des thème dans la liste déroulante
+// affichage des thèmes dans la liste déroulante
 const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
            method: "GET",
            headers: {
@@ -21,7 +21,7 @@ const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
 		themes:result
 	};
 }
-// fin affichage des thème dans la liste déroulante
+// fin affichage des thèmes dans la liste déroulante
 
 // Récupération des champs de la devinette
 

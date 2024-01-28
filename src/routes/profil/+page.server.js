@@ -1,4 +1,6 @@
 import { redirect } from '@sveltejs/kit';
+
+// décode le token pour récupérer l'id utilisateur
 import { jwtDecode } from "jwt-decode";
 
 

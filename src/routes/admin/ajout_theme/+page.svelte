@@ -23,8 +23,6 @@
                 <p class="error">{form.result.error}</p>
             {/if}
 
- 
-
             <button type="submit">Valider</button>
         </form>
         

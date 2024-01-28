@@ -31,7 +31,7 @@ export const actions = {
       const theme = data.get ('theme')     
       const token = cookies.get("token");
       //console.log(answers);
-      const deletetheme = await fetch (`https://guesswhat-api.onrender.com/admin/theme/${theme.id}`, {
+      const deletetheme = await fetch (`https://guesswhat-api.onrender.com/admin/theme/${theme}`, {
          method: "DELETE",
          headers: {
           "Content-Type": "application/json",
@@ -43,6 +43,7 @@ export const actions = {
 
       const result = await deletetheme.json();
       console.log(result);
+      console.log(theme.id);
       return{result}
 }
 };
