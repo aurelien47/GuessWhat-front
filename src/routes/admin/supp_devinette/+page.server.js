@@ -28,10 +28,11 @@ const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
 export const actions = {
   default: async ({ request,cookies }) => {
       const data = await request.formData();
-      const theme = data.get ('theme')     
+      const theme = data.get ('theme');
+      const devinette = data.get ('devinette')     
       const token = cookies.get("token");
       
-      const deletedevi = await fetch (`https://guesswhat-api.onrender.com/admin/theme/${theme}/riddle/${riddle}`, {
+      const deletedevi = await fetch (`https://guesswhat-api.onrender.com/admin/theme/${theme}/riddle/${devinette}`, {
          method: "DELETE",
          headers: {
           "Content-Type": "application/json",
