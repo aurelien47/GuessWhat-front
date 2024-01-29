@@ -8,10 +8,7 @@
   function playGame() {
     goto('/game/visiteur'); 
   }
-
-
   
-
   </script>
 
 <main>

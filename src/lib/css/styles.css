@@ -81,6 +81,9 @@
     text-align: center;
   }
   
+
+
+  
   #welcome-section h1 {
     color: #FFCD29;
     font-family: 'Roboto', sans-serif;
@@ -106,24 +109,9 @@
     border-radius: 20px;
   }
   
-  footer {
-    background-color: #677A91;
-    color: #FFCD29;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap; 
-  }
   
-  footer
-  a {
-  color: #FFCD29;
-  text-decoration: none;
-  margin: 0 20px; 
-  padding: 0.5em 1em; 
-  white-space: nowrap;
-  }
+  
+  
   
   @media (max-width: 768px) {
   #burgerMenu {
@@ -155,18 +143,32 @@
   justify-content: flex-end; 
   }
   
-  footer {
-  flex-wrap: wrap; 
-  justify-content: center; 
-  }
+
   
-  footer a {
-  margin: 10px; 
-  padding: 0.5em;
-  }
+ 
   }
 
+  footer {
+    background-color: #677A91;
+    color: #FFCD29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: now;
+    bottom: 0;
+    width: 100%;
+    }
+    
+    footer a {
+    color: #FFCD29;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 10px; 
+    padding: 0.5em;
 
+    }
+    
 
 
 #bienvenue, .bienvenue {
@@ -380,24 +382,7 @@
   }
   
   
-  footer {
-  background-color: #677A91;
-  color: #FFCD29;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  }
-  
-  footer a {
-  color: #FFCD29;
-  text-decoration: none;
-  padding: 5px 10px;
-  }
-  
+ 
   @media (max-width: 768px) {
   .form-container {
   width: 90%;

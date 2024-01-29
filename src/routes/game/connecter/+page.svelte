@@ -16,57 +16,36 @@
   let selectedAnswer = null;
   let score = 0;
 
-  // onMount(async () => {
-  //   const response = await fetch('https://guesswhat-api.onrender.com/themes.names');
-  //   if (response.ok) {
-  //     themes = await response.json();
-  //   }
-  // });
-
   async function handleThemeChange(event) {
     selectedTheme = event.target.value;
     const response = await fetch(`https://guesswhat-api.onrender.com/theme/${selectedTheme}`);
     if (response.ok) {
       const data = await response.json();
-      questions = data.riddles;
-      console.log(questions)
+      questions = data.riddles.map(question => ({
+        ...question,
+        usedHint: false
+      }));
+      console.log(questions);
     }
   }
-  
-  // function handleAnswerClick(answer) {
-  //   selectedAnswer = answer;
-  // }
 
-  // async function handleSubmit() {
-  //   if (selectedAnswer) {
-  //     const response = await fetch('https://guesswhat-api.onrender.com/validate-answer', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify({
-  // selectedAnswer: selectedAnswer.text
-  //       })
-  //     });
-  //     if (response.ok) {
-  //       const result = await response.json();
-      
-  //     }
-  //   } else {
-  //     console.log('Aucune réponse sélectionnée.');
-  //   }
-  // }
+  function requestHint(questionId) {
+    hint = "Voici un indice pour la question.";
+    const questionIndex = questions.findIndex(q => q.id === questionId);
+    if (questionIndex !== -1) {
+      questions[questionIndex].usedHint = true;
+    }
+  }
 
   async function checkAnswer(answer, questionId) {
-    if (answer.is_good_answer) {
-      score += 1;
+    const questionIndex = questions.findIndex(q => q.id === questionId);
+    if (questionIndex !== -1) {
+      if (answer.is_good_answer) {
+        score += questions[questionIndex].usedHint ? 1.5 : 2;
+      }
+      const btnAnswers = document.querySelectorAll(`#answers-${questionId} button`);
+      btnAnswers.forEach(btn => btn.setAttribute('disabled', true));
     }
-
-    const btnAnswers = document.querySelectorAll(`#answers-${questionId} button`);
-
-    btnAnswers.forEach((btnAnswer) => {
-      btnAnswer.setAttribute('disabled', true);
-    });
   }
 </script>
 
@@ -94,23 +73,20 @@
         {question.content}
       </div>
     </div>
-  <div class="hint-section">
-    <button on:click={() => hint = "Voici un indice pour la question."}>Veux-tu un indice ?</button>
-    <div class="hint-box">{hint}</div>
-  </div>
-  <div id={`answers-${question.id}`} class="answers-section">
-    {#each question.answers as answer}
-      <button on:click={() => checkAnswer(answer, question.id)}>{answer.content}</button>
-    {/each}
-  </div>
+    <div class="hint-section">
+      <button on:click={() => requestHint(question.id)}>Veux-tu un indice ?</button>
+      <div class="hint-box">{hint}</div>
+    </div>
+    <div id={`answers-${question.id}`} class="answers-section">
+      {#each question.answers as answer}
+        <button on:click={() => checkAnswer(answer, question.id)}>{answer.content}</button>
+      {/each}
+    </div>
   {/each}
-  <!-- <div class="validation-section">
-    <button on:click={handleSubmit} type="button">VALIDER</button>
-  </div> -->
 </main>
 
 <style>
-  .top-section, .hint-section, .answers-section, .validation-section {
+  .top-section, .hint-section, .answers-section {
     margin-bottom: 20px;
   }
 
@@ -133,12 +109,12 @@
     cursor: pointer;
   }
 
-  .answers-section button.selected {
-    background-color: #FFCD29;
-    color: #2C3E50;
-  }
+
 
   .answers-section button:hover {
     opacity: 0.8;
   }
+
+
+
 </style>

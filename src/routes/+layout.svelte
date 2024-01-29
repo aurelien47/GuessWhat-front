@@ -4,14 +4,14 @@ import '$lib/css/styles.css';
 
 function toggleMenu() {
   const nav = document.getElementById('topNav');
-  // @ts-ignore
+
   nav.classList.toggle('nav-active');
 }
 
 function toggleNav() {
   const nav = document.getElementById('topNav');
   if (window.innerWidth <= 768) {
-                // @ts-ignore
+               
                 nav.classList.remove('nav-active');
             }
 }
