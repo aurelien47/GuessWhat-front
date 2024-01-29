@@ -6,7 +6,7 @@
 <main>
     <section id="gestion">
         <h2>Supprimer un thème</h2>
-        <form class="formulaire" action="" method="post">
+        <form class="formadmin" action="" method="post">
             <ul>
                 <li>
                     <label for="name">choisir le thème : </label>

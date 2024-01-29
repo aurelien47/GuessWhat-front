@@ -1,6 +1,6 @@
 <script>
     export let data;
-
+    // modifier le format de la date récupérée
     let maDate = new Date(data.user.createdAt)
     maDate = maDate.toLocaleDateString("fr-FR")
     

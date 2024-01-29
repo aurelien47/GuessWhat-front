@@ -13,6 +13,10 @@
     flex-direction: column;
   }
   
+h2 {
+  text-align: center;
+}
+
   header {
     background-color: #677A91;
     color: #FFCD29;
@@ -47,6 +51,9 @@
 
 
   button, .nav-button {
+    min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #677A91; /* Couleur de fond */
     color: #FFCD29; /* Couleur du texte */
     border: none; /* Pas de bordure */
@@ -426,19 +433,23 @@
       
     }
   
-    .formulaire {
-     
+    .formadmin {
+      width:350px;
       margin-top: 20px;
+      margin-left: auto;
+    margin-right: auto;
+    display: flex;
+      flex-direction: column;
+    }
+  
+    .formadmin ul {
+      
+      list-style-type:none;
+      margin:auto;
       
     }
   
-    .formulaire ul {
-      max-width:380px;
-      list-style-type:none;
-      margin:auto;
-    }
-  
-    .formulaire li {
+    .formadmin li {
       margin-top: 5px;
       margin-bottom: 5px;
     }
@@ -455,14 +466,14 @@
     }
     /* FIN PARTIE ADMIN */
 
-    /* PAGE SUPP DEVINETTE */
-    .formsuppdevi {
-      width: auto;
+    /* PAGE SUPP DEVINETTE & THEME */
+
+    
+
+    #devinette_select {
+      width: 50%;
     }
 
-    .formsuppdevi li {
-      flex-direction: column;
-    }
     /* FIN PAGE SUPP DEVINETTE */
 
     /* PAGE PROFIL UITLISATEUR */

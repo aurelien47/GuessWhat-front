@@ -6,7 +6,7 @@
 <main>
     <section id="gestion">
         <h2>Ajouter une devinette</h2>
-        <form class="formulaire" action="" method="POST">
+        <form class="formadmin" action="" method="POST">
             <ul>
                 <li>
                     <label for="name">choisir le thème : </label>
@@ -19,7 +19,7 @@
 
                 <li>
                     <label for="name">texte devinette : </label>
-                    <textarea id="content" name="content" rows="5" cols="23">
+                    <textarea id="content" name="content" rows="5" cols="15">
                         
                     </textarea>
                 </li>
@@ -63,8 +63,6 @@
                 </li>
             </ul>
 
-
-
             {#if form && form.result.status === 'success'}
                 <p class="succes">La devinette à bien été enregistrée</p>
             {/if}
@@ -73,8 +71,8 @@
                 <p class="error">{form.result.error}</p>
             {/if}
 
+            <button type="submit">Valider</button>           
             
-            <button type="submit">Valider</button>
         </form>
         
         
