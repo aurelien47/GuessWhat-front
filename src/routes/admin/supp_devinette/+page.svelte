@@ -53,7 +53,7 @@ const actions = {
 <main>
     <section id="gestion">
         <h2>Supprimer une devinette</h2>
-        <form class="formsuppdevi" action="" method="post">
+        <form class="formadmin" action="" method="post">
             <ul>
                 <li>
                     <label for="nametheme">choisir un thème : </label>
@@ -74,9 +74,6 @@ const actions = {
                         <option value="{devinette.id}">{devinette.content}</option>
                         {/each}
                     </select>
-                    
-                    <button type="submit">Valider</button>                   
-                    
 
                 </li>             
             </ul>
@@ -89,7 +86,7 @@ const actions = {
                 <p class="error">{form.result.error}</p>
             {/if}
 
-            
+            <button type="submit">Valider</button>           
 
         </form>
         
