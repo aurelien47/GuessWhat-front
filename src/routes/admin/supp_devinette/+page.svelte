@@ -40,7 +40,7 @@ const actions = {
 
       const result = await deletedevi.json();
       console.log(result);
-      console.log(riddle.id);
+      
       return{result}
 }
 };
@@ -57,7 +57,7 @@ const actions = {
             <ul>
                 <li>
                     <label for="nametheme">choisir un thème : </label>
-                    <select on:change={(event)=>getquestionfromtheme(event.target.value)} name="" id="theme_select">
+                    <select on:change={(event)=>getquestionfromtheme(event.target.value)} name="theme" id="theme_select">
                         <option value="">choix theme</option>
                         {#each data.themes as theme , i}
                         <option value="{theme.id}">{theme.name}</option>
@@ -69,12 +69,14 @@ const actions = {
             <ul>
                 <li>
                     <label for="namequestion">choisir une devinette : </label>
-
-                    {#each devinettes as devinette , i}
-                    <textarea id="" name="question" rows="5" cols="33">
-                        {devinette.content}
-                    </textarea>                   
-                    {/each}
+                    <select name="devinette" id="devinette_select">
+                        {#each devinettes as devinette , i}
+                        <option value="{devinette.id}">{devinette.content}</option>
+                        {/each}
+                    </select>
+                    
+                    <button type="submit">Valider</button>                   
+                    
 
                 </li>             
             </ul>
@@ -87,7 +89,7 @@ const actions = {
                 <p class="error">{form.result.error}</p>
             {/if}
 
-            <button type="submit">Valider</button>
+            
 
         </form>
         

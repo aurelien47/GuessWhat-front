@@ -43,7 +43,7 @@ export const actions = {
               path: '/'
           })
 
-          redirect(303, '/game/connecter');
+          redirect(303, '/profil');
           
 
 

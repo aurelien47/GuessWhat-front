@@ -34,6 +34,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    align-items:  center;
+
   }
   
   nav a {
@@ -42,6 +44,18 @@
     padding: 0 10px;
     line-height: 70px;
   }
+
+
+  button, .nav-button {
+    background-color: #677A91; /* Couleur de fond */
+    color: #FFCD29; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Padding */
+    margin: 0 10px; /* Marge */
+    cursor: pointer; /* Curseur en forme de main */
+    /* Ajoutez d'autres styles comme la taille de la police, le rayon de la bordure, etc. */
+  }
+
 
   
   
@@ -161,6 +175,10 @@
   
   body p {
     color: #FFFFFF; 
+  }
+
+  .nomjeux{
+    color: #FFCD29;
   }
 
   .login-container {
@@ -621,3 +639,4 @@
   font-size: 14px;
   margin-top: 5px;
 }
+
