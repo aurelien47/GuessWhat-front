@@ -16,7 +16,7 @@ if (!token) {
 
 const decoded = jwtDecode(token);
 
-console.log(decoded);
+//console.log(decoded);
 // fin decodage token
 
     console.log(cookies.get("token"));
@@ -37,9 +37,23 @@ const affprofil = await fetch (`https://guesswhat-api.onrender.com/user/profile/
 	return {
 		user:resultprofil
 	};
-
-
-// fin affichage des infos du profil
-
 	
 }
+// fin affichage des infos du profil
+
+ //affichage des thèmes 
+const reponse = await fetch ('https://guesswhat-api.onrender.com/themes', {
+           method: "GET",
+           headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },                     
+        });
+        const result = await reponse.json();
+        console.log(result);
+  
+	return {
+		themes:result
+	};
+
+ // fin affichage des thèmes 
