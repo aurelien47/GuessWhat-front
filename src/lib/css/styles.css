@@ -468,8 +468,6 @@ h2 {
 
     /* PAGE SUPP DEVINETTE & THEME */
 
-    
-
     #devinette_select {
       width: 50%;
     }
@@ -504,11 +502,16 @@ h2 {
       color: #FFCD29;
     }
 
-    li {
-      justify-content: center;
+    .util_profilutilisateur li {
+      display: inline-flex;
     }
     
     /* FIN PAGE PROFIL UITLISATEUR */
+
+    .utilisateurmain {
+      display: flex;
+      flex-direction: row;
+    }
 
     #changemdp {
       background-color: #677A91;
@@ -519,6 +522,21 @@ h2 {
       font-size: 16px;
       cursor: pointer;
       border-radius: 20px;
+    }
+
+    .scoreprofil {
+      width: 500px;
+      
+    }
+
+    .scoreprofil ul {
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .scoreprofil li {
+      justify-content: center;
     }
 
     /* PAGE CLASSEMENT */

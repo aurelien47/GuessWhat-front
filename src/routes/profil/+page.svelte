@@ -7,12 +7,10 @@
 </script>
     
 
-<main>
+<main class="utilisateurmain">
     
     <section class="profilutilisateur">
         <h1>Votre profil</h1>
-        
-        
             
                 <ul class="util_profilutilisateur">
                     <li class="entete_profilutilisateur">Pseudo :</li>
@@ -29,7 +27,24 @@
                     <li>{maDate}</li>
                 </ul>   
                            
-
         <button id="changemdp">Changer de mot de passe</button>
-    </section>    
+    </section>
+    
+    <section class="scoreprofil">
+        <h2>Votre score</h2>
+
+        <ul>
+            <li>Thèmes</li>
+            <li>Scores</li>          
+        </ul>
+
+        <ul>
+            {#each data.themes as  theme , i}
+            <li>HTML</li>
+            {/each}
+            
+            <li>25</li>
+        </ul>
+        
+    </section>
 </main>
