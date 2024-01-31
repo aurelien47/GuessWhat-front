@@ -30,21 +30,5 @@
         <button id="changemdp">Changer de mot de passe</button>
     </section>
     
-    <section class="scoreprofil">
-        <h2>Votre score</h2>
-
-        <ul>
-            <li>Thèmes</li>
-            <li>Scores</li>          
-        </ul>
-
-        <ul>
-            {#each data.themes as  theme , i}
-            <li>HTML</li>
-            {/each}
-            
-            <li>25</li>
-        </ul>
-        
-    </section>
+    
 </main>
