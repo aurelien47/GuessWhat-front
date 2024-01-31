@@ -1,7 +1,13 @@
 <script>
   import logo from '$lib/assets/images/Logo Guess What.png';
 import '$lib/css/styles.css';
-
+export let data;
+let isLogged;
+if(data.token) {
+  isLogged = true
+}else{
+  isLogged = false
+}
 function toggleMenu() {
   const nav = document.getElementById('topNav');
 
@@ -23,13 +29,17 @@ function toggleNav() {
     <button id="burgerMenu" on:click={toggleMenu}>☰</button>
     <nav id="topNav">
       <a on:click={toggleNav} href="/">Accueil</a>
+      {#if !isLogged}
       <a on:click={toggleNav} href="/login">Connexion</a>
       <a on:click={toggleNav} href="/register">Inscription</a>
+      {:else}
       <a on:click={toggleNav} href="/profil">Profil</a>
       <a on:click={toggleNav} href="/game/connecter">Game</a>
+      <a on:click={toggleNav} href="/scores">Scores</a>
       <form action="/logout" method="post">
         <button type="submit">Déconnexion</button>
       </form>
+      {/if}
     </nav>
   </header>
   <slot> </slot>         

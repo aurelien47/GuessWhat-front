@@ -1,3 +1,4 @@
+
 import { redirect } from '@sveltejs/kit';
 
 export async function  load({ cookies }) {
@@ -19,7 +20,8 @@ if (!token) {
 	 console.log(result);
 
  return {
-	 themes:result
+	 themes:result,
+	 token
  };
 
 	
