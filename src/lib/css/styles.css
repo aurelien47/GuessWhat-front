@@ -13,6 +13,10 @@
     flex-direction: column;
   }
   
+h2 {
+  text-align: center;
+}
+
   header {
     background-color: #677A91;
     color: #FFCD29;
@@ -47,6 +51,9 @@
 
 
   button, .nav-button {
+    min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #677A91; /* Couleur de fond */
     color: #FFCD29; /* Couleur du texte */
     border: none; /* Pas de bordure */
@@ -81,12 +88,16 @@
     text-align: center;
   }
   
+
+
+  
   #welcome-section h1 {
     color: #FFCD29;
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
+    
   }
   
   #welcome-section p {
@@ -106,24 +117,9 @@
     border-radius: 20px;
   }
   
-  footer {
-    background-color: #677A91;
-    color: #FFCD29;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap; 
-  }
   
-  footer
-  a {
-  color: #FFCD29;
-  text-decoration: none;
-  margin: 0 20px; 
-  padding: 0.5em 1em; 
-  white-space: nowrap;
-  }
+  
+  
   
   @media (max-width: 768px) {
   #burgerMenu {
@@ -155,18 +151,32 @@
   justify-content: flex-end; 
   }
   
-  footer {
-  flex-wrap: wrap; 
-  justify-content: center; 
-  }
+
   
-  footer a {
-  margin: 10px; 
-  padding: 0.5em;
-  }
+ 
   }
 
+  footer {
+    background-color: #677A91;
+    color: #FFCD29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: now;
+    bottom: 0;
+    width: 100%;
+    }
+    
+    footer a {
+    color: #FFCD29;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 10px; 
+    padding: 0.5em;
 
+    }
+    
 
 
 #bienvenue, .bienvenue {
@@ -380,24 +390,7 @@
   }
   
   
-  footer {
-  background-color: #677A91;
-  color: #FFCD29;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  }
-  
-  footer a {
-  color: #FFCD29;
-  text-decoration: none;
-  padding: 5px 10px;
-  }
-  
+ 
   @media (max-width: 768px) {
   .form-container {
   width: 90%;
@@ -426,19 +419,23 @@
       
     }
   
-    .formulaire {
-     
+    .formadmin {
+      width:350px;
       margin-top: 20px;
+      margin-left: auto;
+    margin-right: auto;
+    display: flex;
+      flex-direction: column;
+    }
+  
+    .formadmin ul {
+      
+      list-style-type:none;
+      margin:auto;
       
     }
   
-    .formulaire ul {
-      max-width:380px;
-      list-style-type:none;
-      margin:auto;
-    }
-  
-    .formulaire li {
+    .formadmin li {
       margin-top: 5px;
       margin-bottom: 5px;
     }
@@ -455,14 +452,12 @@
     }
     /* FIN PARTIE ADMIN */
 
-    /* PAGE SUPP DEVINETTE */
-    .formsuppdevi {
-      width: auto;
+    /* PAGE SUPP DEVINETTE & THEME */
+
+    #devinette_select {
+      width: 50%;
     }
 
-    .formsuppdevi li {
-      flex-direction: column;
-    }
     /* FIN PAGE SUPP DEVINETTE */
 
     /* PAGE PROFIL UITLISATEUR */
@@ -493,11 +488,16 @@
       color: #FFCD29;
     }
 
-    li {
-      justify-content: center;
+    .util_profilutilisateur li {
+      display: inline-flex;
     }
     
     /* FIN PAGE PROFIL UITLISATEUR */
+
+    .utilisateurmain {
+      display: flex;
+      flex-direction: row;
+    }
 
     #changemdp {
       background-color: #677A91;
@@ -508,6 +508,21 @@
       font-size: 16px;
       cursor: pointer;
       border-radius: 20px;
+    }
+
+    .scoreprofil {
+      width: 500px;
+      
+    }
+
+    .scoreprofil ul {
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .scoreprofil li {
+      justify-content: center;
     }
 
     /* PAGE CLASSEMENT */
