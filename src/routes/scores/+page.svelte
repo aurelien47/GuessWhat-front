@@ -20,9 +20,9 @@
     });
 
     // Traitement de la réponse de l'API et mise à jour des scores.
-    const maxScores = await result.json();
-    console.log(maxScores); // Affichage des scores maximums pour le débogage.
-    scores = maxScores; // Mise à jour de l'état des scores avec les nouvelles données.
+      const maxScores = await result.json();
+      console.log(maxScores); // Affichage des scores maximums pour le débogage.
+      scores = maxScores; // Mise à jour de l'état des scores avec les nouvelles données.
   }
   
 </script>
