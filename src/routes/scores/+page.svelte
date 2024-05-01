@@ -59,7 +59,7 @@
         {#each scores as score, index}
           <tr>
             <td>{index + 1}</td>
-            <td>{score.player.username}</td> <!-- Affichage du pseudo du joueur -->
+            <td>{score.username}</td> <!-- Affichage du pseudo du joueur -->
             <td>{score.maxScore}</td>
             <td>{score.count_indicators}</td>
             <td>{score.errors}</td>
