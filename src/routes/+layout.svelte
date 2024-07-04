@@ -12,7 +12,7 @@
     isLogged = true;
     // Bloc de code pour décoder le token JWT et récupérer le nom d'utilisateur.
     try {
-      const decodedToken = jwt_decode(data.token);
+      const decodedToken = jwtDecode(data.token);
       username = decodedToken.username || ""; // Récupération du pseudo depuis le token décodé.
     } catch (error) {
       console.error('Erreur lors du décodage du token : ', error);
