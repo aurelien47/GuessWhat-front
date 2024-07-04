@@ -1,24 +1,22 @@
 <script>
-  // Importation de l'image du logo et des styles CSS.
-  import logo from '$lib/assets/images/Logo Guess What.png';
+  import logo from '$lib/assets/images/Logo Guess What.png'; // Importation de l'image du logo et des styles CSS.
   import '$lib/css/styles.css';
+  import { jwtDecode } from "jwt-decode";
 
-  // Exportation de la variable 'data' pour la rendre accessible depuis le parent.
-  export let data;
+  export let data; // Exportation de la variable 'data' pour la rendre accessible depuis le parent.
   let isLogged; // Variable pour déterminer si l'utilisateur est connecté.
+  let username = ""; // Variable pour stocker le pseudo de l'utilisateur.
 
   // Vérification du token pour déterminer si l'utilisateur est connecté.
   if(data.token) {
     isLogged = true;
-    // Bloc de code commenté pour décoder le token JWT et récupérer le nom d'utilisateur.
-    /*try {
-        const decodedToken = jwt_decode(data.token);
-        username = decodedToken.username || "";
-      } catch (error) {
-        console.error('Erreur lors du décodage du token : ', error);
-      }*/
-  } else {
-    isLogged = false; // Si pas de token, l'utilisateur n'est pas connecté.
+    // Bloc de code pour décoder le token JWT et récupérer le nom d'utilisateur.
+    try {
+      const decodedToken = jwt_decode(data.token);
+      username = decodedToken.username || ""; // Récupération du pseudo depuis le token décodé.
+    } catch (error) {
+      console.error('Erreur lors du décodage du token : ', error);
+    }
   }
 
   // Fonction pour activer ou désactiver le menu de navigation.
@@ -46,6 +44,9 @@
   <img src={logo} alt="Logo" id="logo"> <!-- Affichage du logo -->
   <button id="burgerMenu" on:click={toggleMenu}>☰</button> <!-- Bouton du menu burger -->
   <nav id="topNav">
+    {#if isLogged}
+      <span>Bienvenue {username}</span>
+    {/if}
     <a on:click={toggleNav} href="/">Accueil</a> <!-- Lien vers la page d'accueil -->
     {#if !isLogged} <!-- Condition pour afficher les liens selon le statut de connexion -->
     <a on:click={toggleNav} href="/login">Connexion</a>
